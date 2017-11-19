@@ -19,6 +19,7 @@ class Block {
       this.nonce += 1
       this.hash = this.calculateHash()
     }
+    console.log('Blocked ', this.index, ' mined: ', this.hash)
   }
 }
 

@@ -4,6 +4,7 @@ class Blockchain {
   constructor() {
     this.blockchain = []
     this.blockchain.push(this.generateGenesisBlock())
+    this.difficulty = 2
   }
 
   generateGenesisBlock() {
@@ -15,6 +16,7 @@ class Blockchain {
     const index = this.blockchain.length
     const timestamp = new Date().toISOString()
     const newBlock = new Block(index, previousHash, timestamp, data)
+    newBlock.mineBlock(this.difficulty)
 
     if (this.isValidBlock(newBlock, this.getLatestBlock())) {
       this.blockchain.push(newBlock)
