@@ -4,7 +4,7 @@ class Blockchain {
   constructor() {
     this.blockchain = []
     this.blockchain.push(this.generateGenesisBlock())
-    this.difficulty = 2
+    this.difficulty = 4
   }
 
   generateGenesisBlock() {

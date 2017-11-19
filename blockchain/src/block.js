@@ -15,7 +15,7 @@ class Block {
   }
 
   mineBlock(difficulty) {
-    while(this.hash.substring(0, dufficulty) !== Array(difficulty+1).join('0')) {
+    while(this.hash.substring(0, difficulty) !== Array(difficulty+1).join('0')) {
       this.nonce += 1
       this.hash = this.calculateHash()
     }
